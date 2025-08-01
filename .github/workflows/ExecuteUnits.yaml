@@ -12,10 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Setup SSH
-        uses: mxschmitt/action-tmate@v3
-        
+
       - name: Setup Depends
         run: sudo apt install pkg-config libglib2.0-dev -y
 
