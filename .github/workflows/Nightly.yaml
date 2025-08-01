@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Depends
+        run: sudo apt install pkg-config libglib2.0-dev -y
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
