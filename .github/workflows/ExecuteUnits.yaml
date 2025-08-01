@@ -29,7 +29,7 @@ jobs:
       - name: Copy Files
         run: cd _setup && sudo ninja install
       
-      - name: Compile Depends -- libjsonwriter
+      - name: Compile Depends -- c-json-writer & JsonParser
         run: |
           REPOHOME=$PWD
           cd ~
