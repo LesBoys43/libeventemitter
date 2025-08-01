@@ -82,7 +82,7 @@ run_command('cp', '@0@/LocalSettings.ini'.format(meson.project_build_root()), me
 
 # 目标
 custom_target('make',
-  command: ['sh', '@0@/make_libeventemitter.sh'.format(meson.project_source_root())],
+  command: ['bash', '@0@/make_libeventemitter.sh'.format(meson.project_source_root())],
   build_by_default: true,
   output: [
     'libee.so.1',
