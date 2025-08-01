@@ -82,7 +82,7 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
 
     json_value root;
 
-    printf("%s\n", out);
+    // printf("%s\n", out);
 
     json_parse(out, &root);
 
