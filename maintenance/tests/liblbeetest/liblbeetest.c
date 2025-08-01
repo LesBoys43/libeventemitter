@@ -35,6 +35,7 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
         g_build_path(G_DIR_SEPARATOR_S, "/usr", "bin", "gcc", NULL),
         g_strdup_printf("-I%s", LBEE_Test_LibeeIncludeDir),
         g_strdup_printf("-L%s", LBEE_Test_LibeeLibDir),
+        g_build_path(G_DIR_SEPARATOR_S, tmp,
                      g_strconcat("LBEETest_", testcase->name, ".c", NULL),
                      NULL),
         LBEE_Test_DefaultCflags,
@@ -44,7 +45,6 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
         "-o",
         g_build_path(G_DIR_SEPARATOR_S, tmp,
                      g_strconcat("LBEETest_", testcase->name, NULL), NULL),
-        g_build_path(G_DIR_SEPARATOR_S, tmp,
         NULL};
 
     gint status = 0;
