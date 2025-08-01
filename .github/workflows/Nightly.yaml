@@ -33,7 +33,7 @@ jobs:
         run: cd _setup && sudo ninja install
 
       - name: Setup P7zip
-        uses: AnimMouse/setup-p7zip-fork@v1
+        run: apt install 7z -y
 
       - name: Config Date
         run: echo "_NIGHTLY_TS=$(date +"%Y_%m_%d_%I_%M_%S_%p")" >> $GITHUB_ENV
