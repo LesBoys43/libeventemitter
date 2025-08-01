@@ -1,0 +1,1 @@
+cc *.c $(pkg-config --cflags --libs glib-2.0) -lHarryDCjson -DLBEE_Test_LibeeIncludeDir=\"$1\" -DLBEE_Test_LibeeLibDir=\"$2\" -o liblbeetest.so -Wl,-shared -fPIC -g -DLBEESELF -rdynamic

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://projectmallard.org/1.0/"
+      type="reference"
+      id="libeventemitter-header">
+
+  <title>libeventemitter 头</title>
+
+  <section id="function-types">
+    <title>函数类型</title>
+
+    <section id="event-listener-func">
+      <title>EventListenerFunc</title>
+
+      <synopsis>
+        <code>typedef gpointer(EventListenerFunc)(
+    GList *, gboolean,
+    struct EventEmitter
+        *);</code>
+      </synopsis>
+
+      <section id="event-listener-func-params">
+        <title>参数</title>
+        <ol>
+          <li>第一个参数是发射时的参数列表</li>
+          <li>第二个参数是是否进行反向传输</li>
+          <li>第三个参数是开源发射器实例</li>
+        </ol>
+      </section>
+
+      <section id="event-listener-func-return">
+        <title>返回值</title>
+        <p>任意类型反传指针</p>
+      </section>
+    </section>
+  </section>
+</page>

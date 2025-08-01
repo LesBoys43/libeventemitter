@@ -1,0 +1,1 @@
+cd .. && clang-format $(find | grep -E ".*\.c$|.*\.h$") -i --verbose

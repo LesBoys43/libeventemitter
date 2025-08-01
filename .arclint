@@ -1,0 +1,27 @@
+{
+  "linters": {
+    "c-style-check": {
+      "type": "clang-format",
+      "include": [
+        "\\.c$",
+        "\\.h$"
+      ],
+      "exclude": [
+        "maintenance/.*"
+      ],
+      "config": {
+        "style": "file",
+        "binary": "clang-format",
+        "format": {
+          "BasedOnStyle": "LLVM",
+          "PointerAlignment": "Right",
+          "IndentWidth": 4,
+          "BreakBeforeBraces": "Attach",
+          "SortIncludes": true,
+          "AlignTrailingComments": true,
+          "ColumnLimit": 80
+        }
+      }
+    }
+  }
+}

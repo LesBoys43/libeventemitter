@@ -1,0 +1,22 @@
+.SS EventEmitter/once。.c
+.SS 原型
+EventListener *EventEmitter_action_once(EventEmitter **ee, gchar *act,
+.PP
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ EventListenerFuncPtr\ cb)\f[R]
+.SS 描述
+监听一个事件，和 on 相比，只会被触发一次。
+.SS 参数
+.TP
+ee
+.PP
+ee: this 指针
+.TP
+act
+.PP
+act: 要监听的具体事件名称
+.TP
+cb
+.PP
+cb: 实际回调函数
+.SS 返回
+生成的 EventListener 实例

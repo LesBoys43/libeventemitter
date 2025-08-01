@@ -1,0 +1,24 @@
+.SS EventListener/call.c
+.SS 原型
+gpointer EventListener_action_call(EventListener **el, GList *args,
+.PP
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gboolean\ dobtrans,\ EventEmitter\ *source_ee)\f[R]
+.SS 描述
+直接调用单一监听器。
+.SS 提醒
+你不应该直接调用该方法。
+.SS 参数
+.TP
+el
+.PP
+el: this 指针
+.TP
+dobtrans
+.PP
+dontrans: 是否做反传
+.TP
+args
+.PP
+args: 直接传递给回调的参数列表
+.SS 返回
+NULL（不进行反传）或回调返回值（进行反传）

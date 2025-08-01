@@ -1,0 +1,37 @@
+.SS EventEmitter/controlflags.c
+.SS get_control_flags
+.SS 原型
+\f[CR]GList *EventEmitter_action_get_control_flags(EventEmitter ee)\f[R]
+.SS 描述
+获取某个发射器的控制标志。
+.SS 参数
+.TP
+ee
+.PP
+ee: this 指针
+.SS 返回
+0：是否允许调用 emit 1：是否允许调用 on
+.SS put_control_flags
+.SS 原型
+void EventEmitter_action_put_control_flags(EventEmitter **ee,
+.PP
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gboolean\ emittable,\f[R]
+.PD 0
+.P
+.PD
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gboolean\ onable)\f[R]
+.SS 描述
+设置某个发射器的控制标志。
+.SS 参数
+.TP
+ee
+.PP
+ee: this 指针
+.TP
+emittable
+.PP
+emittable: 是否允许发射新的事件
+.TP
+onable
+.PP
+onable: 是否允许新监听器加入

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://projectmallard.org/1.0/"
+      type="reference"
+      id="configuration">
+
+  <title>配置</title>
+
+  <section id="backward-transfer">
+    <title>backwardTransfer</title>
+
+    <dl>
+      <dt>描述</dt>
+      <dd>是否进行反向传输</dd>
+
+      <dt>行为</dt>
+      <dd>
+        <p>如果为 <code>true</code>，则 emit 返回 <strong>最后</strong> 一个监听器函数的返回值</p>
+        <p>否则，则 <strong>始终</strong> 返回 null</p>
+      </dd>
+
+      <dt>默认</dt>
+      <dd>false</dd>
+    </dl>
+  </section>
+</page>

@@ -1,0 +1,13 @@
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libeventemitter
+Version: @VER@
+SoVersion: 1
+Description: C Event-Driven Event Emitter Library, Like Node.JS EventEmitter, Non-Thread Safe
+Requires: glib-2.0
+Cflags: -I${includedir}
+Cflags._meson_intro_self: -DLBLIBEE
+Libs: -L${libdir} -lee

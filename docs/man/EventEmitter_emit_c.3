@@ -1,0 +1,23 @@
+.SS EventEmitter/emit.c
+.SS 原型
+EventEmitterEmission EventEmitter_action_emit(EventEmitter **ee, gchar
+*act,
+.PP
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GList\ *args)\f[R]
+.SS 描述
+发射一个事件给所有监听该事件的监听器，同时被动移除无用的 once 监听器。
+.SS 参数
+.TP
+ee
+.PP
+ee: this 指针
+.TP
+act
+.PP
+act: 要发射的具体事件名称
+.TP
+args
+.PP
+args: 参数列表
+.SS 返回
+这次发射的统计信息

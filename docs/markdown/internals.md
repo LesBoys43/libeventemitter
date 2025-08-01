@@ -1,0 +1,34 @@
+## 内部函数
+
+**提醒**: 这些函数**没有**在头文件定义，在动态库中也属于`t`类型
+
+### EventEmitter
+
+#### execEmitting
+
+##### 签名
+
+`<code>`{=html}EventEmittingBTData
+EventEmitter_internals_execEmitting(EventEmitter \*\*ee,
+
+`                                                       Event *event)``</code>`{=html}\
+`                                                       `
+
+##### 介绍
+
+该函数根据事件遍历所有监听器，找出符合条件的，并调用，同时进行惰性删除
+once 监听器。
+
+##### 参数
+
+ee
+
+ee: this 指针
+
+event
+
+event: 要发射的事件
+
+##### 返回值
+
+内部的反传数据。

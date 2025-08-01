@@ -1,0 +1,13 @@
+{
+  "engines": {
+    "lb": {
+      "type": "shell",
+      "include": "\\.c$",
+      "bin": "./maintenance/tests/execUnits.sh",
+      "parser": {
+        "format": "regex",
+        "pattern": "^\\+(.*)\\+\\s+--\\s+(OK|FAIL)$"
+      }
+    }
+  }
+}

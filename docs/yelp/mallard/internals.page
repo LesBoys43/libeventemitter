@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="internal-functions">
+
+  <title>内部函数</title>
+  <info>
+    <note type="reminder">
+      <p>这些函数<strong>没有</strong>在头文件定义，在动态库中也属于<code>t</code>类型</p>
+    </note>
+  </info>
+
+  <section id="event-emitter">
+    <title>EventEmitter</title>
+
+    <section id="exec-emitting">
+      <title>execEmitting</title>
+
+      <synopsis>
+        <code>EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee, Event *event)</code>
+      </synopsis>
+
+      <p>该函数根据事件遍历所有监听器，找出符合条件的，并调用，同时进行惰性删除 once 监听器。</p>
+
+      <section id="exec-emitting-params">
+        <title>参数</title>
+        <dl>
+          <dt><code>ee</code></dt>
+          <dd>this 指针</dd>
+          
+          <dt><code>event</code></dt>
+          <dd>要发射的事件</dd>
+        </dl>
+      </section>
+
+      <section id="exec-emitting-return">
+        <title>返回值</title>
+        <p>内部的反传数据。</p>
+      </section>
+    </section>
+  </section>
+</page>

@@ -1,0 +1,21 @@
+ini_get() {
+    ini="$1"    # INI 文件路径
+    sec="$2"    # 节名(section)
+    fie="$3"    # 字段名(field)
+    
+    # 读取INI文件内容，忽略注释行和空行
+    ini_data=$(sed -e '/^[ \t]*;/d' -e '/^[ \t]*$/d' -e 's/[ \t]*=[ \t]*/=/' "$ini")
+    
+    # 提取指定的内容
+    data=$(echo "$ini_data" | awk -v section="[$sec]" -v field="$fie" '
+        $0 == section { in_section=1; next }
+        /^\[/ { in_section=0 }
+        in_section && $0 ~ "^"field"=" {
+            sub("^"field"=", "")
+            print $0
+            exit
+        }
+    ')
+    
+    echo "$data"
+}

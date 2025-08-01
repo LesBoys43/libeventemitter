@@ -1,0 +1,28 @@
+.SS 内部函数
+\f[B]提醒\f[R]:
+这些函数\f[B]没有\f[R]在头文件定义，在动态库中也属于\f[CR]t\f[R]类型
+.SS EventEmitter
+.SS execEmitting
+.SS 签名
+EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter
+**ee,
+.PP
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Event\ *event)\f[R]
+.PD 0
+.P
+.PD
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \f[R]
+.SS 介绍
+该函数根据事件遍历所有监听器，找出符合条件的，并调用，同时进行惰性删除
+once 监听器。
+.SS 参数
+.TP
+ee
+.PP
+ee: this 指针
+.TP
+event
+.PP
+event: 要发射的事件
+.SS 返回值
+内部的反传数据。

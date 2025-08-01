@@ -1,0 +1,9 @@
+---
+BasedOnStyle: LLVM
+PointerAlignment: Right
+IndentWidth: 4
+BreakBeforeBraces: Attach
+SortIncludes: true
+AlignTrailingComments: true
+ColumnLimit: 80
+...

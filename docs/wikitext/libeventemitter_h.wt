@@ -1,0 +1,14 @@
+== libeventemitter 头 ==
+=== 函数类型 ===
+==== EventListenerFunc ====
+===== 签名 =====
+<code>typedef gpointer(EventListenerFunc)(
+    GList *, gboolean,
+    struct EventEmitter
+        *);</code>
+===== 参数 =====
+1. 第一个参数是发射时的参数列表
+2. 第二个参数是是否进行反向传输
+3. 第三个参数是开源发射器实例
+===== 返回值 =====
+任意类型反传指针

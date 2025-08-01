@@ -1,0 +1,32 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="file"
+      id="EventEmitter_deon_c">
+
+  <title>EventEmitter/deon.c</title>
+
+  <section id="prototype">
+    <title>原型</title>
+    <code>guint EventEmitter_action_deon(EventEmitter **ee, gchar *act)</code>
+  </section>
+
+  <section id="description">
+    <title>描述</title>
+    <p>移除监听某个事件的所有监听器。</p>
+  </section>
+
+  <section id="parameters">
+    <title>参数</title>
+    <dl>
+      <dt>ee</dt>
+      <dd>this 指针</dd>
+      <dt>act</dt>
+      <dd>要移除的具体事件名称</dd>
+    </dl>
+  </section>
+
+  <section id="returns">
+    <title>返回</title>
+    <p>移除了多少个监听器</p>
+  </section>
+
+</page>

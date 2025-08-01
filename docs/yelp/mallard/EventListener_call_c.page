@@ -1,0 +1,39 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="file"
+      id="EventListener_call_c">
+
+  <title>EventListener/call.c</title>
+
+  <section id="prototype">
+    <title>原型</title>
+    <code>gpointer EventListener_action_call(EventListener **el, GList *args, gboolean dobtrans, EventEmitter *source_ee)</code>
+  </section>
+
+  <section id="description">
+    <title>描述</title>
+    <p>直接调用单一监听器。</p>
+  </section>
+
+  <section id="warning">
+    <title>提醒</title>
+    <p>你不应该直接调用该方法。</p>
+  </section>
+
+  <section id="parameters">
+    <title>参数</title>
+    <dl>
+      <dt>el</dt>
+      <dd>this 指针</dd>
+      <dt>dobtrans</dt>
+      <dd>是否做反传</dd>
+      <dt>args</dt>
+      <dd>直接传递给回调的参数列表</dd>
+    </dl>
+  </section>
+
+  <section id="returns">
+    <title>返回</title>
+    <p>NULL（不进行反传）或回调返回值（进行反传）</p>
+  </section>
+
+</page>

@@ -1,0 +1,5 @@
+[LocalSettings]
+wgGlibCflags=@GLIB_CFLAGS@
+wgGlibLdflags=@GLIB_LDFLAGS@
+wgVer=@VERSION@
+wgArch=@ARCH@

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="creation-destruction">
+
+  <title>创建和摧毁</title>
+
+  <section id="general">
+    <title>通用</title>
+
+    <section id="creation">
+      <title>创建</title>
+      <p>所有模块的创建的第一个参数都是自己的双重指针，生命周期由调用者管理。</p>
+    </section>
+
+    <section id="destruction">
+      <title>摧毁</title>
+      <p>所有模块的创建的第一个参数都是自己的双重指针，同时所有模块的摧毁函数都只有一个参数。</p>
+    </section>
+  </section>
+
+  <section id="event-emitter">
+    <title>EventEmitter</title>
+    
+    <section id="emitter-creation">
+      <title>创建</title>
+      <p>第二个 <code>GHashTable</code> 参数是这个发射器的配置。</p>
+    </section>
+  </section>
+
+  <section id="event-listener">
+    <title>EventListener</title>
+    
+    <section id="listener-creation">
+      <title>创建</title>
+      <p>第二个参数是要监听的动作</p>
+      <p>第三个参数是回调指针</p>
+      <info>
+        <note type="reminder">
+          <p>该模块 <strong>不应该</strong> 被你创建，这是内部的</p>
+        </note>
+      </info>
+    </section>
+  </section>
+
+  <section id="event">
+    <title>Event</title>
+    
+    <section id="event-creation">
+      <title>创建</title>
+      <dl>
+        <dt>第一个参数</dt>
+        <dd>是该事件的具体动作</dd>
+        
+        <dt>第二个参数</dt>
+        <dd>是该事件的参数</dd>
+        
+        <dt>第三个参数</dt>
+        <dd>是该事件来源的发射器</dd>
+      </dl>
+      <info>
+        <note type="reminder">
+          <p>该模块 <strong>不应该</strong> 被你创建，这是内部的</p>
+        </note>
+      </info>
+    </section>
+  </section>
+</page>

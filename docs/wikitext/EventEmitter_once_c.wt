@@ -1,0 +1,15 @@
+== EventEmitter/once。.c ==
+=== 原型 ===
+<code>EventListener *EventEmitter_action_once(EventEmitter **ee, gchar *act,
+                                      const EventListenerFuncPtr cb)</code>
+=== 描述 ===
+监听一个事件，和 on 相比，只会被触发一次。
+=== 参数 ===
+; ee
+ee: this 指针
+; act
+act: 要监听的具体事件名称
+;cb
+cb: 实际回调函数
+=== 返回 ===
+生成的 EventListener 实例

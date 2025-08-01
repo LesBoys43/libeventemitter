@@ -1,0 +1,34 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="file" 
+      id="EventEmitter_emit_c">
+
+  <title>EventEmitter/emit.c</title>
+
+  <section id="prototype">
+    <title>原型</title>
+    <code>EventEmitterEmission EventEmitter_action_emit(EventEmitter **ee, gchar *act, GList *args)</code>
+  </section>
+
+  <section id="description">
+    <title>描述</title>
+    <p>发射一个事件给所有监听该事件的监听器，同时被动移除无用的 once 监听器。</p>
+  </section>
+
+  <section id="parameters">
+    <title>参数</title>
+    <dl>
+      <dt>ee</dt>
+      <dd>this 指针</dd>
+      <dt>act</dt>
+      <dd>要发射的具体事件名称</dd>
+      <dt>args</dt>
+      <dd>参数列表</dd>
+    </dl>
+  </section>
+
+  <section id="returns">
+    <title>返回</title>
+    <p>这次发射的统计信息</p>
+  </section>
+
+</page>

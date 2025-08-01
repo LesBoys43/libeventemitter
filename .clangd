@@ -1,0 +1,13 @@
+CompileFlags:
+  Add: 
+    - -I/root/libee/includes/defines
+    - -DLBLIBEE
+    - -Wall
+    - -Wextra
+    - -I/usr/include/glib-2.0
+    - -I/usr/lib/glib-2.0/include
+    - -I/usr/include/sysprof-6
+    - -pthread
+    - -O2
+    - -DVER=1.0
+    - -std=gnu11

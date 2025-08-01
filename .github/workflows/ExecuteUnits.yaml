@@ -1,0 +1,65 @@
+name: Execute Name Units
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  executeunits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Build with Meson
+        uses: BSFishy/meson-build@v1.0.3
+        with:
+          action: 'build'
+          directory: '_setup'
+          meson-version: '1.3.0'
+          ninja-version: '1.9.0.post1'
+
+      - name: Copy Files
+        run: cd _setup && sudo ninja install
+      
+      - name: Compile Depends -- libjsonwriter
+        run: |
+          REPOHOME=$PWD
+          cd ~
+          git clone https://github.com/SoraVWV/c-json-writer.git
+          cd c-json-writer
+          cc *.c -fPIC -Wl,-shared -o libjsonwriter.so
+          sudo cp *.so /usr/local/lib
+          sudo cp *.h /usr/local/include
+          cd ~
+          git clone https://github.com/HarryDC/JsonParser
+          cd JsonParser
+          cd src
+          cc json.c vector.c -fPIC -Wl,-shared -o libHarryDCjson.so
+          sudo cp *.so /usr/local/lib
+          sudo ldconfig
+          cd $REPOHOME 
+      
+      - name: Compile Test Module
+        run: |
+          cd maintenance/tests
+          cd liblbeetest
+          sh compile.sh /usr/local/include /usr/local/lib
+          sudo cp *.so /usr/local/lib
+          sudo ldconfig
+          cd ..
+          cc main.c -o test -lglib-2.0 -llbeetest $(pkg-config --cflags glib-2.0)
+          cd ../..
+      
+      - name: Execute Tests
+        run: |
+          cd maintenance/tests
+          chmod +x test
+          ./test &> $GITHUB_STEP_SUMMARY

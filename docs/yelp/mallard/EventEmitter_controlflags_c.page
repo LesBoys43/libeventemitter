@@ -1,0 +1,53 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="file"
+      id="EventEmitter_controlflags_c">
+
+  <title>EventEmitter/controlflags.c</title>
+
+  <section id="get_control_flags">
+    <title>get_control_flags</title>
+    <section id="get_control_flags-prototype">
+      <title>原型</title>
+      <code>GList *EventEmitter_action_get_control_flags(EventEmitter ee)</code>
+    </section>
+    <section id="get_control_flags-description">
+      <title>描述</title>
+      <p>获取某个发射器的控制标志。</p>
+    </section>
+    <section id="get_control_flags-parameters">
+      <title>参数</title>
+      <dl>
+        <dt>ee</dt>
+        <dd>this 指针</dd>
+      </dl>
+    </section>
+    <section id="get_control_flags-returns">
+      <title>返回</title>
+      <p>0：是否允许调用 emit 1：是否允许调用 on</p>
+    </section>
+  </section>
+
+  <section id="put_control_flags">
+    <title>put_control_flags</title>
+    <section id="put_control_flags-prototype">
+      <title>原型</title>
+      <code>void EventEmitter_action_put_control_flags(EventEmitter **ee, gboolean emittable, gboolean onable)</code>
+    </section>
+    <section id="put_control_flags-description">
+      <title>描述</title>
+      <p>设置某个发射器的控制标志。</p>
+    </section>
+    <section id="put_control_flags-parameters">
+      <title>参数</title>
+      <dl>
+        <dt>ee</dt>
+        <dd>this 指针</dd>
+        <dt>emittable</dt>
+        <dd>是否允许发射新的事件</dd>
+        <dt>onable</dt>
+        <dd>是否允许新监听器加入</dd>
+      </dl>
+    </section>
+  </section>
+
+</page>

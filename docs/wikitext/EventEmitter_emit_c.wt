@@ -1,0 +1,15 @@
+== EventEmitter/emit.c ==
+=== 原型 ===
+<code>EventEmitterEmission EventEmitter_action_emit(EventEmitter **ee, gchar *act,
+                                              GList *args)</code>
+=== 描述 ===
+发射一个事件给所有监听该事件的监听器，同时被动移除无用的 once 监听器。
+=== 参数 ===
+; ee
+ee: this 指针
+; act
+act: 要发射的具体事件名称
+; args
+args: 参数列表
+=== 返回 ===
+这次发射的统计信息

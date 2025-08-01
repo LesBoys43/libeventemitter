@@ -1,0 +1,22 @@
+.SS libeventemitter 头
+.SS 函数类型
+.SS EventListenerFunc
+.SS 签名
+typedef gpointer(EventListenerFunc)(
+.PP
+\f[CR]\ \ \ GList\ *,\ gboolean,\f[R]
+.PD 0
+.P
+.PD
+\f[CR]\ \ \ struct\ EventEmitter\f[R]
+.PD 0
+.P
+.PD
+\f[CR]\ \ \ \ \ \ \ *);\f[R]
+.SS 参数
+1.
+第一个参数是发射时的参数列表 2.
+第二个参数是是否进行反向传输 3.
+第三个参数是开源发射器实例
+.SS 返回值
+任意类型反传指针

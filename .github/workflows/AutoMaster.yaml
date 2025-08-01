@@ -1,0 +1,46 @@
+---
+name: AutoMaster Build
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+
+jobs:
+  automaster-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Build with Meson
+        uses: BSFishy/meson-build@v1.0.3
+        with:
+          action: 'build'
+          directory: '_setup'
+          setup-options: '--prefix=~/_libee_automaster_build'
+          meson-version: '1.3.0'
+          ninja-version: '1.9.0.post1'
+
+      - name: Copy files
+        run: cd _setup && ninja install
+
+      - name: Setup P7zip
+        uses: AnimMouse/setup-p7zip-fork@v1
+
+      - name: Config Date
+        run: echo "_BUILD_TS=$(date +"%Y_%m_%d_%I_%M_%S_%p")" >> $GITHUB_ENV
+
+      - name: Archive Artifact
+        run: /opt/7z a -scrc=SHA1 -sdel -mmt2 -mx4 ~/libeventemitter_automaster_${_BUILD_TS}.7z ~/_libee_automaster_build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: libeventemitter-automaster-build
+          path: ~/libeventemitter_automaster_${_BUILD_TS}.7z
