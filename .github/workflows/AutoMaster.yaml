@@ -40,7 +40,7 @@ jobs:
         run: echo "_BUILD_TS=$(date +"%Y_%m_%d_%I_%M_%S_%p")" >> $GITHUB_ENV
 
       - name: Archive Artifact
-        run: /opt/7z a -scrc=SHA1 -sdel -mmt2 -mx4 ~/libeventemitter_automaster_${_BUILD_TS}.7z ~/_libee_automaster_build
+        run: 7z a -scrc=SHA1 -sdel -mmt2 -mx4 ~/libeventemitter_automaster_${_BUILD_TS}.7z ~/_libee_automaster_build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4

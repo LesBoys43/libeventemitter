@@ -39,7 +39,7 @@ jobs:
         run: echo "_NIGHTLY_TS=$(date +"%Y_%m_%d_%I_%M_%S_%p")" >> $GITHUB_ENV
 
       - name: Archive Artifact
-        run: /opt/7z a -scrc=SHA1 -sdel -mmt2 -mx4 ~/libeventemitter_nightly_${_NIGHTLY_TS}.7z ~/_libee_nightly_build
+        run: 7z a -scrc=SHA1 -sdel -mmt2 -mx4 ~/libeventemitter_nightly_${_NIGHTLY_TS}.7z ~/_libee_nightly_build
 
       - name: Create New Release of Nightly Build
         env:
