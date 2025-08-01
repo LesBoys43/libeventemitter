@@ -1,7 +1,7 @@
 name: Format Source
 
 on:  # yamllint disable-line rule:truthy
-  push: []
+  push
 
 jobs:
   formatsrc:
