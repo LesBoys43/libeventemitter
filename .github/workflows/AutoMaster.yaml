@@ -34,7 +34,7 @@ jobs:
         run: cd _setup && sudo ninja install
 
       - name: Setup P7zip
-        run: sudo apt install 7z -y
+        run: sudo apt install p7zip-full -y
 
       - name: Config Date
         run: echo "_BUILD_TS=$(date +"%Y_%m_%d_%I_%M_%S_%p")" >> $GITHUB_ENV
