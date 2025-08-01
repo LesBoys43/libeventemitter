@@ -35,6 +35,8 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
         g_build_path(G_DIR_SEPARATOR_S, "/usr", "bin", "gcc", NULL),
         g_strdup_printf("-I%s", LBEE_Test_LibeeIncludeDir),
         g_strdup_printf("-L%s", LBEE_Test_LibeeLibDir),
+                     g_strconcat("LBEETest_", testcase->name, ".c", NULL),
+                     NULL),
         LBEE_Test_DefaultCflags,
         LBEE_Test_DefaultLdflags,
         testcase->extraCflags,
@@ -43,8 +45,6 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
         g_build_path(G_DIR_SEPARATOR_S, tmp,
                      g_strconcat("LBEETest_", testcase->name, NULL), NULL),
         g_build_path(G_DIR_SEPARATOR_S, tmp,
-                     g_strconcat("LBEETest_", testcase->name, ".c", NULL),
-                     NULL),
         NULL};
 
     gint status = 0;
@@ -82,7 +82,7 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
 
     json_value root;
 
-    // printf("%s\n", out);
+    printf("%s\n", out);
 
     json_parse(out, &root);
 
