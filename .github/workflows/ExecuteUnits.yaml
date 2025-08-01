@@ -1,4 +1,4 @@
-name: Execute Name Units
+name: Execute Units
 
 on:  # yamllint disable-line rule:truthy
   push:
