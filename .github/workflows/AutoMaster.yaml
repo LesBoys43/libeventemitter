@@ -46,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: libeventemitter-automaster-build
-          path: ~/libeventemitter_automaster_${_BUILD_TS}.7z
+          path: ~/libeventemitter_automaster_${{ env._BUILD_TS }}.7z
