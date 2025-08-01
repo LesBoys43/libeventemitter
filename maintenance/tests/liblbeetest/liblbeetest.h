@@ -7,7 +7,7 @@
 
 #define LBEE_Test_DefaultCflags                                                \
     "-g", "-O2", "-rdynamic", "-I/usr/include/glib-2.0",                       \
-        "-I/usr/lib/glib-2.0/include", "-I/usr/include/sysprof-6", "-pthread"
+        "-I/usr/lib/glib-2.0/include", "-I/usr/include/sysprof-6", "-pthread", "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
 #define LBEE_Test_DefaultLdflags "-g", "-lee", "-ljsonwriter", "-lglib-2.0"
 
 #ifndef LBEE_Test_LibeeIncludeDir
