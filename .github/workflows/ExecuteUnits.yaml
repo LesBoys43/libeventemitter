@@ -52,6 +52,9 @@ jobs:
           sudo ldconfig
           cd $REPOHOME 
       
+      - name: Setup SSH
+        uses: mxschmitt/action-tmate@v3
+      
       - name: Compile Test Module
         run: |
           cd maintenance/tests
