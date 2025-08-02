@@ -5,6 +5,8 @@
 #include <glib/gstdio.h>
 #include <libeventemitter.h>
 
+gboolean fail = 0;
+
 void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
     gchar *template = g_strdup("/tmp/LBEETEST_XXXXXX");
     const gchar *tmp;
@@ -107,9 +109,15 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
     }
 }
 
-void lbeerunall(GList *list) { g_list_foreach(list, (GFunc)lbeerunone, NULL); }
+guint lbeerunall(GList *list) { g_list_foreach(list, (GFunc)lbeerunone, NULL);
+    return fail;
+ }
 
 void lbeeformatout(gchar *name, gboolean ok) {
+    if (!ok) {
+        fail++;
+    }
+
     gchar *okstr = ok ? "PASS" : "FAIL";
 
     printf(LBEE_Test_OutFormat, name, okstr);

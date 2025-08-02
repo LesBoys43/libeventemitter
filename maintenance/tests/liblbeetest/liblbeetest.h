@@ -27,6 +27,6 @@ typedef struct LBEE_TestCase {
     json_value *excepted;
 } LBEE_TestCase;
 
-void lbeerunall(GList *list);
+guint lbeerunall(GList *list);
 void lbeerunone(LBEE_TestCase *testcase, gpointer user_data);
 void lbeeformatout(gchar *name, gboolean ok);
