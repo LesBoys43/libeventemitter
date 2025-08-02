@@ -5,7 +5,7 @@
 #include <glib/gstdio.h>
 #include <libeventemitter.h>
 
-gboolean fail = 0;
+guint fail = 0;
 
 void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
     gchar *template = g_strdup("/tmp/LBEETEST_XXXXXX");
