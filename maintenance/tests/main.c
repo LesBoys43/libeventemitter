@@ -158,10 +158,10 @@ int main() {
     list = g_list_append(list, &tc9);
 
     // 运行所有测试
-    lbeerunall(list);
+    return lbeerunall(list);
 
     // 清理资源
-    g_free(code1);
+    /* g_free(code1);
     g_free(code2);
     g_free(code3);
     g_free(code4);
@@ -169,5 +169,5 @@ int main() {
     g_free(code6);
     g_free(code7);
     g_free(code8);
-    g_free(code9);
+    g_free(code9); */
 }
