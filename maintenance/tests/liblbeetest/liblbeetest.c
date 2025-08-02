@@ -109,9 +109,10 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
     }
 }
 
-guint lbeerunall(GList *list) { g_list_foreach(list, (GFunc)lbeerunone, NULL);
+guint lbeerunall(GList *list) {
+    g_list_foreach(list, (GFunc)lbeerunone, NULL);
     return fail;
- }
+}
 
 void lbeeformatout(gchar *name, gboolean ok) {
     if (!ok) {
