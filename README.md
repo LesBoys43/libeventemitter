@@ -1,6 +1,7 @@
 ![GitHub License](https://img.shields.io/github/license/LesBoys43/libeventemitter?style=plastic)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/AutoMaster.yaml?style=plastic)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/ExecuteUnits.yaml?style=plastic&label=test)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/QuickFormat.yaml?style=plastic&label=format)
 ![GitHub Release](https://img.shields.io/github/v/release/LesBoys43/libeventemitter?include_prereleases&style=plastic)
 
 
