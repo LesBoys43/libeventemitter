@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 #define g_printf printf // g_printf因未知原因无法使用
-#define REALVER #VER
+#define _TOSTRING(str) #str
+#define TOSTRING(str) _TOSTRING(str)
+#define REALVER TOSTRING(VER)
 
 int main() {
     g_printf("libeventemitter %s\n", REALVER);
