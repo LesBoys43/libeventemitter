@@ -4,7 +4,7 @@ extends: default
 rules:
   trailing-spaces:
     level: warning
-  line-length: 
+  line-length:
     max: 480
-  new-line-at-end-of-file: 
+  new-line-at-end-of-file:
     level: warning

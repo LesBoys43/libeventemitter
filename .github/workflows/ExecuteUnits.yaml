@@ -1,3 +1,5 @@
+---
+
 name: Execute Units
 
 on:  # yamllint disable-line rule:truthy
@@ -31,7 +33,7 @@ jobs:
 
       - name: Copy Files
         run: cd _setup && sudo ninja install
-      
+
       - name: Compile Depends -- c-json-writer & JsonParser
         run: |
           REPOHOME=$PWD
@@ -50,8 +52,8 @@ jobs:
           cc json.c vector.c -fPIC -Wl,-shared -o libHarryDCjson.so
           sudo cp *.so /usr/local/lib
           sudo ldconfig
-          cd $REPOHOME 
-      
+          cd $REPOHOME
+
       - name: Compile Test Module
         run: |
           cd maintenance/tests
@@ -62,7 +64,7 @@ jobs:
           cd ..
           cc main.c -o test -lglib-2.0 -llbeetest $(pkg-config --cflags glib-2.0)
           cd ../..
-      
+
       - name: Execute Tests
         run: |
           cd maintenance/tests

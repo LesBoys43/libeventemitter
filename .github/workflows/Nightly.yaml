@@ -28,7 +28,7 @@ jobs:
           setup-options: '--prefix=~/_libee_nightly_build'
           meson-version: '1.3.0'
           ninja-version: '1.9.0.post1'
-      
+
       - name: Copy files
         run: cd _setup && sudo ninja install
 
