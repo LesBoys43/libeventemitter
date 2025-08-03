@@ -88,7 +88,7 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
 
     json_parse(out, &root);
 
-    if (root->type != JSON_TYPE_OBJECT) {
+    if (root.type != JSON_TYPE_OBJECT) {
         lbeeformatout(testcase->name, 0);
         return;
     }
