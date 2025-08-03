@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>EventListener/call.c</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">EventListener/call.c</span></h1></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="prototype"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">原型</span></h2></div>
+<div class="region"><div class="contents pagewide"><div class="code"><pre class="contents"><code>gpointer EventListener_action_call(EventListener **el, GList *args, gboolean dobtrans, EventEmitter *source_ee)</code></pre></div></div></div>
+</div></section><section id="description"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">描述</span></h2></div>
+<div class="region"><div class="contents pagewide"><p class="p">直接调用单一监听器。</p></div></div>
+</div></section><section id="warning"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">提醒</span></h2></div>
+<div class="region"><div class="contents pagewide"><p class="p">你不应该直接调用该方法。</p></div></div>
+</div></section><section id="parameters"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">参数</span></h2></div>
+<div class="region"><div class="contents pagewide"><div class="unknown"><div class="inner"><div class="region"><div class="contents"></div></div></div></div></div></div>
+</div></section><section id="returns"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">返回</span></h2></div>
+<div class="region"><div class="contents pagewide"><p class="p">NULL（不进行反传）或回调返回值（进行反传）</p></div></div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"></div></footer>
+</div></main></body>
+</html>

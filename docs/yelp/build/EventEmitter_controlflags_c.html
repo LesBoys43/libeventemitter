@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>EventEmitter/controlflags.c</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">EventEmitter/controlflags.c</span></h1></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="get_control_flags"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">get_control_flags</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="get_control_flags-prototype"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">原型</span></h3></div>
+<div class="region"><div class="contents pagewide"><div class="code"><pre class="contents"><code>GList *EventEmitter_action_get_control_flags(EventEmitter ee)</code></pre></div></div></div>
+</div></section><section id="get_control_flags-description"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">描述</span></h3></div>
+<div class="region"><div class="contents pagewide"><p class="p">获取某个发射器的控制标志。</p></div></div>
+</div></section><section id="get_control_flags-parameters"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">参数</span></h3></div>
+<div class="region"><div class="contents pagewide"><div class="unknown"><div class="inner"><div class="region"><div class="contents"></div></div></div></div></div></div>
+</div></section><section id="get_control_flags-returns"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">返回</span></h3></div>
+<div class="region"><div class="contents pagewide"><p class="p">0：是否允许调用 emit 1：是否允许调用 on</p></div></div>
+</div></section>
+</div>
+</div></section><section id="put_control_flags"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">put_control_flags</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="put_control_flags-prototype"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">原型</span></h3></div>
+<div class="region"><div class="contents pagewide"><div class="code"><pre class="contents"><code>void EventEmitter_action_put_control_flags(EventEmitter **ee, gboolean emittable, gboolean onable)</code></pre></div></div></div>
+</div></section><section id="put_control_flags-description"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">描述</span></h3></div>
+<div class="region"><div class="contents pagewide"><p class="p">设置某个发射器的控制标志。</p></div></div>
+</div></section><section id="put_control_flags-parameters"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">参数</span></h3></div>
+<div class="region"><div class="contents pagewide"><div class="unknown"><div class="inner"><div class="region"><div class="contents"></div></div></div></div></div></div>
+</div></section>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"></div></footer>
+</div></main></body>
+</html>

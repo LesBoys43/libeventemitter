@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>内部函数</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">内部函数</span></h1></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="event-emitter"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">EventEmitter</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="exec-emitting"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">execEmitting</span></h3></div>
+<div class="region">
+<div class="contents pagewide">
+<div class="synopsis"><div class="inner"><div class="region"><div class="contents"><div class="code"><pre class="contents"><code>EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee, Event *event)</code></pre></div></div></div></div></div>
+<p class="p">该函数根据事件遍历所有监听器，找出符合条件的，并调用，同时进行惰性删除 once 监听器。</p>
+</div>
+<section id="exec-emitting-params"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title"><span class="title">参数</span></h4></div>
+<div class="region"><div class="contents pagewide"><div class="unknown"><div class="inner"><div class="region"><div class="contents"></div></div></div></div></div></div>
+</div></section><section id="exec-emitting-return"><div class="inner">
+<div class="hgroup pagewide"><h4 class="title"><span class="title">返回值</span></h4></div>
+<div class="region"><div class="contents pagewide"><p class="p">内部的反传数据。</p></div></div>
+</div></section>
+</div>
+</div></section>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"></div></footer>
+</div></main></body>
+</html>

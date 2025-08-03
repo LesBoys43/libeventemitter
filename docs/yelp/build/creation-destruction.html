@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>创建和摧毁</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">创建和摧毁</span></h1></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="general"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">通用</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="creation"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">创建</span></h3></div>
+<div class="region"><div class="contents pagewide"><p class="p">所有模块的创建的第一个参数都是自己的双重指针，生命周期由调用者管理。</p></div></div>
+</div></section><section id="destruction"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">摧毁</span></h3></div>
+<div class="region"><div class="contents pagewide"><p class="p">所有模块的创建的第一个参数都是自己的双重指针，同时所有模块的摧毁函数都只有一个参数。</p></div></div>
+</div></section>
+</div>
+</div></section><section id="event-emitter"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">EventEmitter</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="emitter-creation"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">创建</span></h3></div>
+<div class="region"><div class="contents pagewide"><p class="p">第二个 <span class="code">GHashTable</span> 参数是这个发射器的配置。</p></div></div>
+</div></section>
+</div>
+</div></section><section id="event-listener"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">EventListener</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="listener-creation"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">创建</span></h3></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">第二个参数是要监听的动作</p>
+<p class="p">第三个参数是回调指针</p>
+</div></div>
+</div></section>
+</div>
+</div></section><section id="event"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Event</span></h2></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="event-creation"><div class="inner">
+<div class="hgroup pagewide"><h3 class="title"><span class="title">创建</span></h3></div>
+<div class="region"><div class="contents pagewide"><div class="unknown"><div class="inner"><div class="region"><div class="contents"></div></div></div></div></div></div>
+</div></section>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"></div></footer>
+</div></main></body>
+</html>
