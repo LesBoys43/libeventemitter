@@ -87,8 +87,14 @@ void lbeerunone(LBEE_TestCase *testcase, gpointer user_data) {
     // printf("%s\n", out);
 
     json_parse(out, &root);
+    
+    if (root->type != JSON_TYPE_OBJECT) {lbeeformatout(testcase->name, 0);
+        return;}
 
     json_value *actual = json_value_with_key(&root, "out");
+    
+    if (actual->type != JSON_TYPE_STRING) {lbeeformatout(testcase->name, 0);
+        return;}
 
     g_unlink(g_build_path(G_DIR_SEPARATOR_S, tmp,
                           g_strconcat("LBEETest_", testcase->name, NULL), ".c",
