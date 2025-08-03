@@ -59,11 +59,19 @@ arch = build_machine.cpu_family()
 glibCflags = run_command('pkg-config', '--cflags', 'glib-2.0', capture: true, check: true).stdout()
 glibLdflags = run_command('pkg-config', '--libs', 'glib-2.0', capture: true, check: true).stdout()
 
+v = meson.project_version()
+
+if run_command('git', 'status', check: false).returncode() == 0
+  message('You are building git version! Use git commit as version')
+  
+  v = 'git.@0@'.format(run_command('sh', '-c', 'git log --oneline | head -1 | cut -d\' \' -f1', capture: true, check: true).stdout())
+endif
+
 cfg = configuration_data({
   'ARCH': arch,
   'GLIB_CFLAGS': glibCflags,
   'GLIB_LDFLAGS': glibLdflags,
-  'VERSION': meson.project_version()
+  'VERSION': v
 })
 
 configure_file(configuration: cfg, input: 'LocalSettings.ini.in', output: 'LocalSettings.ini')
