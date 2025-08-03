@@ -25,9 +25,9 @@ jobs:
 
           git add .
 
-          git commit -m "+Action: Maintenance+ format sources"
+          git commit -m "+Action: Maintenance+ format sources" || true
 
-          git push
+          git push || true
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
