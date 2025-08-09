@@ -17,7 +17,7 @@ void EventEmitter_action_create(EventEmitter **ee, GHashTable *cfg) {
     } else {
         (*ee)->ee_do_bwtrans = false; // 默认不做反向传输
     }
-    
+
     if (g_hash_table_contains(cfg, "backwardTransferPolicy")) {
         (*ee)->ee_btpolicy = (EventEmitterBackwardTransferPolicy)GPOINTER_TO_INT(
             g_hash_table_lookup(cfg, "backwardTransferPolicy")
