@@ -9,6 +9,7 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
     gpointer data = NULL; // 反传数据
 
     gboolean stopUpdateData = false;
+    gboolean useList = (*ee)->ee_btpolicy == EEBTP_LIST;
 
     EventListener *el = NULL;
 
@@ -22,6 +23,14 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
                 i--; // 保持平衡
                 continue;
             }
+            
+            if (useList) {
+                data = g_list_append(data, EventListener_action_call(&curr_el, event->e_args,
+                                             event->e_source_ee->ee_do_bwtrans,
+                                             event->e_source_ee));
+                stopUpdateData = true;
+            }
+            
             if ((*ee)->ee_btpolicy == EEBTP_FIRST && !stopUpdateData) {
                 data = EventListener_action_call(&curr_el, event->e_args,
                                              event->e_source_ee->ee_do_bwtrans,
