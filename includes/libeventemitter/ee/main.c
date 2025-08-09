@@ -19,8 +19,9 @@ void EventEmitter_action_create(EventEmitter **ee, GHashTable *cfg) {
     }
 
     if (g_hash_table_contains(cfg, "backwardTransferPolicy")) {
-        (*ee)->ee_btpolicy = (EventEmitterBackwardTransferPolicy)GPOINTER_TO_INT(
-            g_hash_table_lookup(cfg, "backwardTransferPolicy"))
+        (*ee)->ee_btpolicy =
+            (EventEmitterBackwardTransferPolicy)GPOINTER_TO_INT(
+                g_hash_table_lookup(cfg, "backwardTransferPolicy"))
     } else {
         // 使用默认策略
         (*ee)->ee_btpolicy = EEBTP_DEFAULT;
