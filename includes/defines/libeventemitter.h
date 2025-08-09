@@ -66,3 +66,10 @@ typedef struct EventEmitterEmission {
     } eee_bted_data;
     guint eee_listen_triggered_count;
 } EventEmitterEmission;
+// 反传策略
+typedef enum EventEmitterBackwardTransferPolicy {
+    EEBTP_LAST = 0x4,
+    EEBTP_FIRST = 0x8,
+    EEBTP_LIST = 0xB,
+    EEBTP_DEFAULT = EEBTP_LAST
+} EventEmitterBackwardTransferPolicy;
