@@ -64,3 +64,17 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
 
     return eebtd;
 }
+
+gpoibter EventEmitter_internals_applyBtPolicy(EventEmitter **ee, GList* rawdata) {
+    switch((*ee)->ee_btpolicy) {
+        case EEBTP_FIRST:
+            return g_list_nth_data(rawdata, 0);
+        case EEBTP_LAST:
+            return g_list_nth_data(rawdata, g_list_length(rawdata) - 1);
+        case EEBTP_LIST:
+            return rawdata;
+        default:
+            g_critical("Invalid policy!");
+            return rawdata;
+    }
+}
