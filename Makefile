@@ -24,6 +24,7 @@ output/libee-ver: compile
 output/libee.so.1: compile
 ~ $(word 2,$(ACTORS)) $(LDFLAGS1) `find | grep '.*\.o' | grep -v 'ver\.o'` -o output/libee.so.1
 ~ objcopy --localize-symbol=EventEmitter_internals_execEmitting $@ $@
+~ objcopy --localize-symbol=EventEmitter_internals_applyBtPolicy $@ $@
 ~ @echo Generated binary: $@
 
 outsready:
