@@ -18,7 +18,7 @@ int main(void) {
     GHashTable *cfg = g_hash_table_new(g_str_hash, g_str_equal);
 
     g_hash_table_insert(cfg, "backwardTransfer", GINT_TO_POINTER(1));
-    
+
     EventEmitterBackwardTransferPolicy policy = EEBTP_FIRST;
     g_hash_table_insert(cfg, "backwardTransferPolicy", GINT_TO_POINTER(policy));
 
