@@ -1,41 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page xmlns="http://projectmallard.org/1.0/"
-      type="guide"
-      id="internal-functions">
+      type="reference"
+      id="eventemitter-internals">
 
   <title>内部函数</title>
   <info>
-    <note type="reminder">
-      <p>这些函数<strong>没有</strong>在头文件定义，在动态库中也属于<code>t</code>类型</p>
+    <note type="warning">
+      <p>这些函数<em>没有</em>在头文件中定义，在动态库中也属于<code>t</code>类型</p>
     </note>
   </info>
 
-  <section id="event-emitter">
+  <section id="eventemitter">
     <title>EventEmitter</title>
 
-    <section id="exec-emitting">
+    <section id="execEmitting">
       <title>execEmitting</title>
-
       <synopsis>
-        <code>EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee, Event *event)</code>
+        <return>EventEmittingBTData</return>
+        <prototype>EventEmitter_internals_execEmitting(EventEmitter **ee, Event *event)</prototype>
       </synopsis>
-
       <p>该函数根据事件遍历所有监听器，找出符合条件的，并调用，同时进行惰性删除 once 监听器。</p>
-
-      <section id="exec-emitting-params">
+      <section id="execEmitting-params">
         <title>参数</title>
         <dl>
-          <dt><code>ee</code></dt>
+          <dt>ee</dt>
           <dd>this 指针</dd>
-          
-          <dt><code>event</code></dt>
+          <dt>event</dt>
           <dd>要发射的事件</dd>
         </dl>
       </section>
-
-      <section id="exec-emitting-return">
+      <section id="execEmitting-returns">
         <title>返回值</title>
         <p>内部的反传数据。</p>
+      </section>
+    </section>
+
+    <section id="applyBtPolicy">
+      <title>applyBtPolicy</title>
+      <synopsis>
+        <return>gpointer</return>
+        <prototype>EventEmitter_internals_applyBtPolicy(EventEmitter **ee, GList *rawdata)</prototype>
+      </synopsis>
+      <p>该函数根据原始列表应用反向传输策略。</p>
+      <section id="applyBtPolicy-params">
+        <title>参数</title>
+        <dl>
+          <dt>ee</dt>
+          <dd>this 指针</dd>
+          <dt>rawdata</dt>
+          <dd>原始反向传输数据</dd>
+        </dl>
+      </section>
+      <section id="applyBtPolicy-returns">
+        <title>返回值</title>
+        <p>应用策略后的数据。</p>
       </section>
     </section>
   </section>

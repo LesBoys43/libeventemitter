@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page xmlns="http://projectmallard.org/1.0/"
       type="reference"
-      id="configuration">
+      id="eventemitter-config">
 
   <title>配置</title>
 
-  <section id="backward-transfer">
+  <section id="backwardTransfer">
     <title>backwardTransfer</title>
-
-    <dl>
-      <dt>描述</dt>
-      <dd>是否进行反向传输</dd>
-
-      <dt>行为</dt>
-      <dd>
-        <p>如果为 <code>true</code>，则 emit 返回 <strong>最后</strong> 一个监听器函数的返回值</p>
-        <p>否则，则 <strong>始终</strong> 返回 null</p>
-      </dd>
-
-      <dt>默认</dt>
-      <dd>false</dd>
-    </dl>
+    <p>是否进行反向传输</p>
+    <section id="backwardTransfer-behavior">
+      <title>行为</title>
+      <p>如果为 <code>true</code>，则 emit 返回 <em>最后</em> 一个监听器函数的返回值
+否则，则 <em>始终</em> 返回 null</p>
+    </section>
+    <section id="backwardTransfer-default">
+      <title>默认值</title>
+      <p>false</p>
+    </section>
   </section>
+
+  <section id="backwardTransferPolicy">
+    <title>backwardTransferPolicy</title>
+    <p>反向传输策略</p>
+    <section id="backwardTransferPolicy-behavior">
+      <title>行为</title>
+      <ul>
+        <li>EEBTP_FIRST: 返回第一个被触发的触发器值</li>
+        <li>EEBTP_LAST: 返回最后一个被触发的触发器值</li>
+        <li>EEBTP_LIST: 返回原始反向传输列表</li>
+      </ul>
+    </section>
+    <section id="backwardTransferPolicy-default">
+      <title>默认值</title>
+      <p>EEBTP_LAST</p>
+    </section>
+  </section>
+
 </page>

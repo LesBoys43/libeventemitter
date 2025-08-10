@@ -9,3 +9,14 @@
 
 ; 默认
 false
+=== backwardTransferPolicy ===
+; 描述
+反向传输策略
+
+; 行为
+* EEBTP_FIRST: 返回第一个被触发的触发器值
+* EEBTP_LAST: 返回最后一个被触发的触发器值
+* EEBTP_LIST: 返回原始反向传输列表
+
+; 默认
+EEBTP_LAST
