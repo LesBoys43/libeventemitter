@@ -21,11 +21,10 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
                 continue;
             }
 
-                data = g_list_append(
-                    data,
-                    EventListener_action_call(&curr_el, event->e_args,
-                                              event->e_source_ee->ee_do_bwtrans,
-                                              event->e_source_ee));
+            data = g_list_append(data, EventListener_action_call(
+                                           &curr_el, event->e_args,
+                                           event->e_source_ee->ee_do_bwtrans,
+                                           event->e_source_ee));
 
             el = curr_el;
             if (curr_el->el_once) {
@@ -46,16 +45,17 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
     return eebtd;
 }
 
-gpoibter EventEmitter_internals_applyBtPolicy(EventEmitter **ee, GList* rawdata) {
-    switch((*ee)->ee_btpolicy) {
-        case EEBTP_FIRST:
-            return g_list_nth_data(rawdata, 0);
-        case EEBTP_LAST:
-            return g_list_nth_data(rawdata, g_list_length(rawdata) - 1);
-        case EEBTP_LIST:
-            return rawdata;
-        default:
-            g_critical("Invalid policy!");
-            return rawdata;
+gpoibter EventEmitter_internals_applyBtPolicy(EventEmitter **ee,
+                                              GList *rawdata) {
+    switch ((*ee)->ee_btpolicy) {
+    case EEBTP_FIRST:
+        return g_list_nth_data(rawdata, 0);
+    case EEBTP_LAST:
+        return g_list_nth_data(rawdata, g_list_length(rawdata) - 1);
+    case EEBTP_LIST:
+        return rawdata;
+    default:
+        g_critical("Invalid policy!");
+        return rawdata;
     }
 }
