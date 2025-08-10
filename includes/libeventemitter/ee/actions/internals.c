@@ -59,7 +59,7 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
 
     if (shouldNonNull) {
         eebtd.eebtd_who = el;
-        eebtd.eebtd_what = data;
+        eebtd.eebtd_what = EventEmitter_internals_applyBtPolicy(ee, data);
     };
 
     return eebtd;
