@@ -32,3 +32,30 @@ event: 要发射的事件
 ##### 返回值
 
 内部的反传数据。
+
+#### applyBtPolicy
+
+##### 签名 {#签名_1}
+
+`<code>`{=html}gpointer
+EventEmitter_internals_applyBtPolicy(EventEmitter \*\*ee,
+
+`                                             GList *rawdata)``</code>`{=html}
+
+#### 介绍 {#介绍_1}
+
+该函数根据原始列表应用反向传输策略。
+
+#### 参数 {#参数_1}
+
+ee
+
+ee: this 指针
+
+rawdata
+
+rawdata: 原始反向传输数据
+
+##### 返回值 {#返回值_1}
+
+应用策略后的数据。

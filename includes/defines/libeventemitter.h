@@ -29,6 +29,15 @@
 typedef struct Event Event;
 typedef struct EventListener EventListener;
 typedef struct EventEmitter EventEmitter;
+typedef enum EventEmitterBackwardTransferPolicy
+    EventEmitterBackwardTransferPolicy;
+// 反传策略
+typedef enum EventEmitterBackwardTransferPolicy {
+    EEBTP_LAST = 0x4,
+    EEBTP_FIRST = 0x8,
+    EEBTP_LIST = 0xB,
+    EEBTP_DEFAULT = EEBTP_LAST
+} EventEmitterBackwardTransferPolicy;
 // == 函数指针定义 ==
 typedef gpointer(EventListenerFunc)(
     GList *, gboolean,
@@ -55,7 +64,8 @@ typedef struct EventEmitter {
     // gsize ee_listener_arr_size; // 迁移到glib后废弃,
     // {{SeeAlso|{{WikiLink|curid=1440}}}}
     GQueue *ee_listeners;
-    gboolean ee_do_bwtrans; // 是否做反向传播
+    gboolean ee_do_bwtrans;                         // 是否做反向传播
+    EventEmitterBackwardTransferPolicy ee_btpolicy; // 反传策略 since 1.1
 } EventEmitter;
 typedef struct EventEmitterEmission {
     gboolean eee_completed;

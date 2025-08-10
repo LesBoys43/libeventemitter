@@ -10,3 +10,5 @@ typedef struct EventEmittingBTData {
 // == 函数定义 ==
 EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
                                                         Event *event);
+gpointer EventEmitter_internals_applyBtPolicy(EventEmitter **ee,
+                                              GList *rawdata);

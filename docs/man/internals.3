@@ -26,3 +26,21 @@ event
 event: 要发射的事件
 .SS 返回值
 内部的反传数据。
+.SS applyBtPolicy
+.SS 签名
+gpointer EventEmitter_internals_applyBtPolicy(EventEmitter **ee,
+.PP
+\f[CR]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GList\ *rawdata)\f[R]
+.SS 介绍
+该函数根据原始列表应用反向传输策略。
+.SS 参数
+.TP
+ee
+.PP
+ee: this 指针
+.TP
+rawdata
+.PP
+rawdata: 原始反向传输数据
+.SS 返回值
+应用策略后的数据。

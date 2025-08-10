@@ -157,6 +157,22 @@ int main() {
 
     list = g_list_append(list, &tc9);
 
+    // 第四个测试用例
+    gchar *code10 = NULL;
+    g_file_get_contents("units/10.c", &code10, NULL, NULL);
+
+    json_value exceptedjv10 = {.type = JSON_TYPE_STRING,
+                               .value = {.string = "1+1=2"}};
+
+    LBEE_TestCase tc10 = {.name = "Test backward transfer policy - Should gets "
+                                  "the first listener triggered",
+                          .code = code10,
+                          .excepted = &exceptedjv10,
+                          .extraCflags = "-O0",
+                          .extraLdflags = "-ljsonwriter"};
+
+    list = g_list_append(list, &tc10);
+
     // 运行所有测试
     return lbeerunall(list);
 
