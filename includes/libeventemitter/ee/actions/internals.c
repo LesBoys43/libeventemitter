@@ -45,7 +45,7 @@ EventEmittingBTData EventEmitter_internals_execEmitting(EventEmitter **ee,
     return eebtd;
 }
 
-gpoibter EventEmitter_internals_applyBtPolicy(EventEmitter **ee,
+gpointer EventEmitter_internals_applyBtPolicy(EventEmitter **ee,
                                               GList *rawdata) {
     switch ((*ee)->ee_btpolicy) {
     case EEBTP_FIRST:
