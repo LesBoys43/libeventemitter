@@ -30,7 +30,7 @@ typedef struct Event Event;
 typedef struct EventListener EventListener;
 typedef struct EventEmitter EventEmitter;
 // typedef enum EventEmitterBackwardTransferPolicy
-    // EventEmitterBackwardTransferPolicy;
+// EventEmitterBackwardTransferPolicy;
 // 反传策略
 typedef enum EventEmitterBackwardTransferPolicy {
     EEBTP_LAST = 0x4,
