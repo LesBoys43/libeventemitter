@@ -4,6 +4,7 @@
 
 // == 基础行为实现 ==
 void EventEmitter_action_create(EventEmitter **ee, GHashTable *cfg) {
+    LIBEE_INITLOCALE;
     if (ee == NULL || *ee == NULL) {
         LIBEE_FATALERROR_NULLPTR;
     }
