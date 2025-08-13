@@ -1,4 +1,4 @@
-project('libeventemitter', 'c', version: '1.0', license: 'BSD-3', meson_version: '>=1.3.0')
+project('libeventemitter', 'c', version: '1.1.lb1', license: 'BSD-3', meson_version: '>=1.3.0')
 
 glib = dependency('glib-2.0', required: true)
 
