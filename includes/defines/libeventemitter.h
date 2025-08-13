@@ -2,6 +2,7 @@
 #include <glib.h>
 // == 工具定义 ==
 #ifdef LBLIBEE
+#define LIBEE_INITLOCALE g_setenv("CHARSET", "UTF-8", false)
 #define g_memdup g_memdup2 // 历史遗留，{{SeeAlso|{{WikiLink|curid=1354}}}}
 #ifndef NULL
 #define NULL (void *)0x0 // 在部分情况下的修复
