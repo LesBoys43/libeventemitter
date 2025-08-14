@@ -29,11 +29,11 @@ jobs:
           property: name
 
       - name: Clone AUR Repo
-        uses: chihqiang/checkout-action@v0.1.0
-        with:
-          repo: aur@aur.archlinux.org:libeventemitter-nightly.git
-          ssh_key: ${{ secrets.AUR_SSHKEY }}
-          dest: /home/runner/eeaur
+        runs:
+          echo "${{ secrets.AUR_SSHKEY }}" > .ssh_key
+          chown runner .ssh_key
+          chmod 600 .ssh_key
+          GIT_SSH_COMMAND="ssh -i ./.ssh_key -o StrictHostKeyChecking=no" git clone ssh://aur@aur.archlinux.org/libeventemitter-nightly.git /home/runner/eeaur
 
       - name: Update PKGBUILD and .SRCINFO
         working-directory: /home/runner/eeaur
