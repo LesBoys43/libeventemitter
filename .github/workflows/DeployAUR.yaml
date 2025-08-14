@@ -26,7 +26,7 @@ jobs:
         id: getrname
         uses: fangqiuming/latest-release-version@v1.1.1
         with:
-          property: name
+          property: tag_name
 
       - name: Clone AUR Repo
         run: |
@@ -45,9 +45,9 @@ jobs:
         working-directory: /home/runner/eeaur
         run: |
           git add .
-          git commit -m 'Auto Update'
           git config --global user.name "Twinkle[bot]"
           git config --global user.email "example@example.com"
+          git commit -m 'Auto Update'
           echo "${{ secrets.AUR_SSHKEY }}" > .ssh_key
           chown runner .ssh_key
           chmod 600 .ssh_key
