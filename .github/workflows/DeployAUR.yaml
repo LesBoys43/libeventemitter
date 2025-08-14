@@ -31,7 +31,7 @@ jobs:
       - name: Clone AUR Repo
         uses: chihqiang/checkout-action@v0.1.0
         with:
-          repo: ssh://aur@aur.archlinux.org/libeventemitter-nightly.git
+          repo: aur@aur.archlinux.org:libeventemitter-nightly.git
           ssh_key: ${{ secrets.AUR_SSHKEY }}
           dest: /home/runner/eeaur
 
