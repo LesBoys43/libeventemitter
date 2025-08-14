@@ -1,0 +1,9 @@
+*.gz binary
+
+docs/yelp/build/* linguist-generated
+docs/man/* linguist-generated
+docs/markdown/* linguist-generated
+
+*.3 linguist-language=Groff
+*.wt linguist-language=Wikitext
+*.make linguist-language=Makefile
