@@ -24,7 +24,7 @@ jobs:
 
       - name: Get Release Name
         id: getrname
-        uses: fangqiuming/latest-release-version@v1.x
+        uses: fangqiuming/latest-release-version@v1
         with:
           property: name
 
