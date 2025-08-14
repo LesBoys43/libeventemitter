@@ -29,7 +29,7 @@ jobs:
           property: name
 
       - name: Clone AUR Repo
-        runs:
+        runs: |
           echo "${{ secrets.AUR_SSHKEY }}" > .ssh_key
           chown runner .ssh_key
           chmod 600 .ssh_key
