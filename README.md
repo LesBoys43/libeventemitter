@@ -1,8 +1,8 @@
-![GitHub License](https://img.shields.io/github/license/LesBoys43/libeventemitter?style=plastic)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/AutoMaster.yaml?style=plastic)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/ExecuteUnits.yaml?style=plastic&label=test)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/QuickFormat.yaml?style=plastic&label=format)
-![GitHub Release](https://img.shields.io/github/v/release/LesBoys43/libeventemitter?include_prereleases&style=plastic)
+![GitHub License](https://img.shields.io/github/license/LesBoys43/libeventemitter?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/AutoMaster.yaml?style=for-the-badge)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/ExecuteUnits.yaml?style=for-the-badge&label=test)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/LesBoys43/libeventemitter/QuickFormat.yaml?style=for-the-badge&label=format)
+![GitHub Release](https://img.shields.io/github/v/release/LesBoys43/libeventemitter?include_prereleases&style=for-the-badge)
 
 
 **libeventemitter** 是一款轻量级，非线程安全，事件驱动的 C 语言事件发射器库，参照了 JavaScript 的 EventEmitter 和本人之前的 PyEventEmitter 开发。
