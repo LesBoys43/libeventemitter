@@ -12,6 +12,17 @@ meson 是构建时依赖。
 glib 是运行时依赖。
 
 # 安装
+## 从 AUR
+如果你使用 Arch, 则可通过 AUR 安装：
+### 夜晚构建
+![AUR Popularity](https://img.shields.io/aur/popularity/libeventemitter-nightly?style=for-the-badge&label=AUR%20Popularity)
+![AUR Version](https://img.shields.io/aur/version/libeventemitter-nightly?style=for-the-badge&label=AUR%20Version)
+夜晚构建（x64 二进制）在 libeventemitter-nightly 上
+### 源码
+仍在施工
+### 稳定版
+仍在施工
+## 从源代码
 克隆仓库后，如果你是小白，请根据以下指引安装：
 ```bash
 chmod +x BriskMakeAll.sh # 确保可执行
